@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Kopieres til ~/Library/LaunchAgents/. Kjører daglig-sjekk.sh hver dag kl. 08:00 lokal tid. -->
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>no.jnv-dashboard.daglig</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/haraldolderheim/Documents/Claude/Projects/jnv-dashboard/scripts/daglig-sjekk.sh</string>
+  </array>
+  <key>StartCalendarInterval</key>
+  <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
+  <key>EnvironmentVariables</key>
+  <dict><key>PATH</key><string>/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:/usr/sbin:/sbin</string></dict>
+  <key>StandardOutPath</key><string>/Users/haraldolderheim/Library/Logs/jnv-dashboard.log</string>
+  <key>StandardErrorPath</key><string>/Users/haraldolderheim/Library/Logs/jnv-dashboard.log</string>
+</dict>
+</plist>
