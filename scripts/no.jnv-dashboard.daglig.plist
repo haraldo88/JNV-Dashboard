@@ -7,7 +7,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/zsh</string>
-    <string>/Users/haraldolderheim/Documents/Claude/Projects/jnv-dashboard/scripts/daglig-sjekk.sh</string>
+    <string>/Users/haraldolderheim/Library/Application Support/jnv-dashboard/scripts/daglig-sjekk.sh</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict>
