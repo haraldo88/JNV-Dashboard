@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Nisselue på grønn bakgrunn – faneikon for JNV dashboard -->
+  <rect width="64" height="64" rx="14" fill="#1d5c3f"/>
+  <path d="M11 46 C15 29 25 15 45 12 C49 21 51 33 53 46 Z" fill="#d62d2d"/>
+  <rect x="7" y="41" width="50" height="13" rx="6.5" fill="#fff"/>
+  <circle cx="46" cy="13" r="7" fill="#fff"/>
+</svg>
