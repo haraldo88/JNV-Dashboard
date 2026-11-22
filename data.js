@@ -45,7 +45,7 @@ window.JNV_DATA = {
       seere: { "2026-U46": 3506 },
       merknad: "Kun åpningshelgen 13.–15. nov (5. plass, 72 kinoer).",
       kilde: "https://www.ses.fi/ajankohtaista/top-20-viiden-karjessa-oli-kolme-ensi-iltaa/",
-      trailer: null
+      trailer: { url: "https://www.youtube.com/watch?v=X5Gf3rpxKhE", tekst: "YouTube (finsk)" }
     },
     {
       kode: "SE", navn: "Sverige",
