@@ -1,5 +1,5 @@
 #!/bin/zsh
-# Daglig sjekk av kinotall. Kjøres av launchd (se scripts/no.jnv-dashboard.daglig.plist).
+# Daglig sjekk av kinotall. Kjøres av launchd (se scripts/no.jnv-dashboard.daglig.plist, kl. 09:30).
 # Claude oppdaterer bare data.js; skriptet validerer, committer og pusher.
 set -euo pipefail
 

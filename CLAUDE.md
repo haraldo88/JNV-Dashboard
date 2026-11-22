@@ -5,7 +5,7 @@ Statisk nettside (GitHub Pages) som viser kinobesøk for filmen «Julenissens ve
 ## Filer
 - `index.html` – layout, stil og grafer (ren SVG, ingen biblioteker). Endres sjelden.
 - `data.js` – ALLE tall, titler, datoer og lenker. Oppdater tall her.
-- `scripts/daglig-sjekk.sh` – kjøres kl. 08:00 hver dag av launchd på Haralds Mac
+- `scripts/daglig-sjekk.sh` – kjøres kl. 09:30 hver dag av launchd på Haralds Mac
   (`~/Library/LaunchAgents/no.jnv-dashboard.daglig.plist`). Kjører Claude med
   `scripts/daglig-sjekk-prompt.md`, validerer data.js, committer og pusher. Logg: `~/Library/Logs/jnv-dashboard.log`.
   Jobben bruker en egen klone i `~/Library/Application Support/jnv-dashboard` (macOS blokkerer
