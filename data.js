@@ -55,7 +55,7 @@ window.JNV_DATA = {
       seere: {},
       merknad: "Nr. 7 på Biotoppen uke 46. Besøkstall ikke offentlig tilgjengelig.",
       kilde: "https://www.bioguiden.se/",
-      trailer: null
+      trailer: { url: "https://youtu.be/mxnVMOpO09M", tekst: "YouTube (svensk)" }
     },
     {
       kode: "DK", navn: "Danmark",
