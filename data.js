@@ -7,12 +7,13 @@
 
 window.JNV_DATA = {
   film: "Julenissens verksted",
-  oppdatert: "2026-11-21",
+  oppdatert: "2026-11-23",
 
   // Uker som vises i grafen (rekkefølge = x-aksen)
   uker: [
     { id: "2026-U45", navn: "Uke 45", periode: "2.–8. nov" },
-    { id: "2026-U46", navn: "Uke 46", periode: "9.–15. nov" }
+    { id: "2026-U46", navn: "Uke 46", periode: "9.–15. nov" },
+    { id: "2026-U47", navn: "Uke 47", periode: "16.–22. nov" }
   ],
 
   // Fast rekkefølge = fast farge per land. Ikke endre rekkefølgen.
@@ -22,9 +23,9 @@ window.JNV_DATA = {
       tittel: "Julenissens verksted",
       premiere: "2026-11-06",
       distributor: "Nordisk Film Distribusjon",
-      seere: { "2026-U45": 59179, "2026-U46": 40658 },
-      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179).",
-      kilde: "https://cine.no/2026/11/16/kinotoppen-pensjonskuppet-passerte-300-000-kinobesok/",
+      seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 38486 },
+      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (138 323 − 99 837); 138 323 er «Tot. besøk» per 22.11 fra kino.no.",
+      kilde: "https://kino.no/tallogfakta/",
       trailer: { url: "https://www.nfkino.no/film/julenissens-verksted", tekst: "Trailer hos Nordisk Film Kino" }
     },
     {
