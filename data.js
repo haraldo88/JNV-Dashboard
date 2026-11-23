@@ -57,7 +57,9 @@ window.JNV_DATA = {
       merknad: "Kun åpningshelgen 13.–15. nov (5. plass, 72 kinoer).",
       kilde: "https://www.ses.fi/ajankohtaista/top-20-viiden-karjessa-oli-kolme-ensi-iltaa/",
       trailer: { url: "https://www.youtube.com/watch?v=X5Gf3rpxKhE", tekst: "YouTube (finsk)" },
-      anmeldelser: []
+      anmeldelser: [
+        { kilde: "Filminurkka (YouTube)", url: "https://www.youtube.com/watch?v=jnvtEh05Ah4" }
+      ]
     },
     {
       kode: "SE", navn: "Sverige",
