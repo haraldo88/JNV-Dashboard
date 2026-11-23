@@ -122,6 +122,12 @@
     <div class="table-wrap"><table id="table-trailers"></table></div>
   </section>
 
+  <section class="card">
+    <h2>Anmeldelser</h2>
+    <p class="hint">Lenker til anmeldelser og omtaler i hvert land.</p>
+    <div class="table-wrap"><table id="table-reviews"></table></div>
+  </section>
+
   <footer>
     <strong>Kilder</strong>
     <ul id="sources"></ul>
@@ -185,6 +191,14 @@
       <td><span class="country"><span class="sw" style="background:${colorOf(l.idx)}"></span>${l.navn}</span></td>
       <td><em>${l.tittel}</em></td>
       <td>${l.trailer ? `<a href="${l.trailer.url}" target="_blank" rel="noopener">${l.trailer.tekst} ↗</a>` : '<span class="muted">Ikke funnet</span>'}</td>
+    </tr>`).join("") + "</tbody>";
+
+  // Reviews
+  document.getElementById("table-reviews").innerHTML =
+    `<thead><tr><th>Land</th><th>Anmeldelser</th></tr></thead><tbody>` +
+    land.map((l) => `<tr>
+      <td><span class="country"><span class="sw" style="background:${colorOf(l.idx)}"></span>${l.navn}</span></td>
+      <td>${(l.anmeldelser || []).length ? l.anmeldelser.map((r) => `<a href="${r.url}" target="_blank" rel="noopener">${r.kilde} ↗</a>`).join(" · ") : '<span class="muted">Ingen funnet ennå</span>'}</td>
     </tr>`).join("") + "</tbody>";
 
   // Sources

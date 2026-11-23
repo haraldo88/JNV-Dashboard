@@ -26,7 +26,13 @@ window.JNV_DATA = {
       seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 38486 },
       merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (138 323 − 99 837); 138 323 er «Tot. besøk» per 22.11 fra kino.no.",
       kilde: "https://kino.no/tallogfakta/",
-      trailer: { url: "https://www.nfkino.no/film/julenissens-verksted", tekst: "Trailer hos Nordisk Film Kino" }
+      trailer: { url: "https://www.nfkino.no/film/julenissens-verksted", tekst: "Trailer hos Nordisk Film Kino" },
+      anmeldelser: [
+        { kilde: "NRK", url: "https://www.nrk.no/artikkel/julenissens-verksted-sjarmerande-eventyrspenning-1531569" },
+        { kilde: "Moviezine", url: "https://www.moviezine.no/anmeldelser/anmeldelse-julenissens-verksted-en-ny-norsk-juleslager" },
+        { kilde: "Filmkikk", url: "https://filmkikk.no/anmeldelse.php?id=8915" },
+        { kilde: "Barnevakten", url: "https://www.barnevakten.no/film/julenissens-verksted/" }
+      ]
     },
     {
       kode: "SK", navn: "Slovakia",
@@ -36,7 +42,8 @@ window.JNV_DATA = {
       seere: { "2026-U45": 5205, "2026-U46": 2587 },
       merknad: "UFD-uker starter torsdag (5.11 og 12.11).",
       kilde: "https://www.ufd.sk/aktualny-top-20/",
-      trailer: { url: "https://www.forumfilm.sk/santova-carovna-dielna", tekst: "Trailer hos Forum Film" }
+      trailer: { url: "https://www.forumfilm.sk/santova-carovna-dielna", tekst: "Trailer hos Forum Film" },
+      anmeldelser: []
     },
     {
       kode: "FI", navn: "Finland",
@@ -46,7 +53,8 @@ window.JNV_DATA = {
       seere: { "2026-U46": 3506 },
       merknad: "Kun åpningshelgen 13.–15. nov (5. plass, 72 kinoer).",
       kilde: "https://www.ses.fi/ajankohtaista/top-20-viiden-karjessa-oli-kolme-ensi-iltaa/",
-      trailer: { url: "https://www.youtube.com/watch?v=X5Gf3rpxKhE", tekst: "YouTube (finsk)" }
+      trailer: { url: "https://www.youtube.com/watch?v=X5Gf3rpxKhE", tekst: "YouTube (finsk)" },
+      anmeldelser: []
     },
     {
       kode: "SE", navn: "Sverige",
@@ -56,7 +64,10 @@ window.JNV_DATA = {
       seere: {},
       merknad: "Nr. 7 på Biotoppen uke 46. Besøkstall ikke offentlig tilgjengelig.",
       kilde: "https://www.bioguiden.se/",
-      trailer: { url: "https://youtu.be/mxnVMOpO09M", tekst: "YouTube (svensk)" }
+      trailer: { url: "https://youtu.be/mxnVMOpO09M", tekst: "YouTube (svensk)" },
+      anmeldelser: [
+        { kilde: "MovieZine", url: "https://www.moviezine.se/nyheter/ny-julfilm-charmar-kritikerna-ett-maste-for-barnfamiljer" }
+      ]
     },
     {
       kode: "DK", navn: "Danmark",
@@ -66,7 +77,10 @@ window.JNV_DATA = {
       seere: {},
       merknad: "Billettall fra DFI ikke tilgjengelig ennå.",
       kilde: "https://www.nfbio.dk/film/jagten-paa-julens-magi",
-      trailer: { url: "https://www.youtube.com/watch?v=7Fhro1JmQjA", tekst: "YouTube" }
+      trailer: { url: "https://www.youtube.com/watch?v=7Fhro1JmQjA", tekst: "YouTube" },
+      anmeldelser: [
+        { kilde: "Filmmagasinet Ekko", url: "https://www.ekkofilm.dk/anmeldelser/jagten-pa-julens-magi/" }
+      ]
     },
     {
       kode: "DE", navn: "Tyskland",
@@ -76,7 +90,12 @@ window.JNV_DATA = {
       seere: {},
       merknad: "Ikke hatt premiere ennå. Tall kommer via FFA.",
       kilde: "https://www.kino.de/film/julenissens-verksted--01KT65VK1F2M24J25WASA8M5WP",
-      trailer: { url: "https://www.kino.de/film/julenissens-verksted--01KT65VK1F2M24J25WASA8M5WP", tekst: "Trailer hos kino.de" }
+      trailer: { url: "https://www.kino.de/film/julenissens-verksted--01KT65VK1F2M24J25WASA8M5WP", tekst: "Trailer hos kino.de" },
+      anmeldelser: [
+        { kilde: "Filmdienst", url: "https://www.filmdienst.de/film/details/626886/auf-der-suche-nach-der-weihnachtswerkstatt" },
+        { kilde: "nord24", url: "https://www.nord24.de/kultur/auf-der-suche-nach-der-weihnachtswerkstatt-elfenalarm-nachts-432733.html" },
+        { kilde: "Jugend Filmjury", url: "https://www.jugend-filmjury.com/film/auf_der_suche_nach_der_weihnachtswerkstatt" }
+      ]
     },
     {
       kode: "PL", navn: "Polen",
@@ -86,7 +105,8 @@ window.JNV_DATA = {
       seere: {},
       merknad: "Ikke hatt premiere ennå.",
       kilde: "https://www.vivarto.pl/warsztat-swietego-mikolaja",
-      trailer: { url: "https://www.youtube.com/watch?v=gjqPWUFwjKw", tekst: "YouTube (polsk)" }
+      trailer: { url: "https://www.youtube.com/watch?v=gjqPWUFwjKw", tekst: "YouTube (polsk)" },
+      anmeldelser: []
     }
   ]
 };
