@@ -43,7 +43,10 @@ window.JNV_DATA = {
       merknad: "UFD-uker starter torsdag (5.11 og 12.11).",
       kilde: "https://www.ufd.sk/aktualny-top-20/",
       trailer: { url: "https://www.forumfilm.sk/santova-carovna-dielna", tekst: "Trailer hos Forum Film" },
-      anmeldelser: []
+      anmeldelser: [
+        { kilde: "ČSFD", url: "https://www.csfd.sk/film/1789666-santova-carovna-dielna/prehlad/" },
+        { kilde: "Feminity (Zoznam)", url: "https://feminity.zoznam.sk/cl/2005520/9540767/Najkrajsi-vianocny-darcek-do-papiera-nezabalite--Presvedci-vas-o-tom-nova-rozpravka" }
+      ]
     },
     {
       kode: "FI", navn: "Finland",
