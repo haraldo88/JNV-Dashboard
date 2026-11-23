@@ -21,7 +21,7 @@ Statisk nettside (GitHub Pages) som viser kinobesøk for filmen «Julenissens ve
 - Bruk bare tall fra kildene under. Ikke finn på tall; la `seere: {}` stå tom hvis tall mangler.
 
 ## Kilder
-- Norge: filmweb.no/kinotoppen, cine.no
+- Norge: kino.no/tallogfakta/ (Kinotoppen: helgetall og «Tot. besøk» per film)
 - Sverige: bioguiden.se (Biotoppen), filminstitutet.se
 - Danmark: dfi.dk (aktuelt billetsalg), kino.dk
 - Finland: ses.fi (Top 20 / katsojaluvut), filmikamari.fi
