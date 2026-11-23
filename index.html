@@ -96,10 +96,17 @@
   </header>
 
   <section class="card">
+    <h2>Seere per uke, alle land</h2>
+    <p class="hint">Besøk i hver uke, stablet per land. Bare land med publiserte tall er med.</p>
+    <ul class="legend" id="legend-weekly"></ul>
+    <div class="chart-box"><div id="chart-weekly" role="img" aria-label="Stablet søylediagram: antall seere per uke per land" style="height:100%"></div></div>
+  </section>
+
+  <section class="card">
     <h2>Akkumulert antall seere, alle land</h2>
     <p class="hint">Sum fra start til og med hver uke, stablet per land. Bare land med publiserte tall er med.</p>
-    <ul class="legend" id="legend-weekly"></ul>
-    <div class="chart-box"><div id="chart-weekly" role="img" aria-label="Stablet søylediagram: akkumulert antall seere per uke per land" style="height:100%"></div></div>
+    <ul class="legend" id="legend-cumulative"></ul>
+    <div class="chart-box"><div id="chart-cumulative" role="img" aria-label="Stablet søylediagram: akkumulert antall seere per uke per land" style="height:100%"></div></div>
   </section>
 
   <section class="kpis" id="kpis"></section>
@@ -207,8 +214,10 @@
 
   // ---------- Charts (ren SVG, ingen eksterne biblioteker) ----------
   const series = land.filter((l) => l.total != null).sort((a, b) => a.idx - b.idx);
-  document.getElementById("legend-weekly").innerHTML = series.map((l) =>
+  const legendHtml = series.map((l) =>
     `<li><span class="sw" style="background:${colorOf(l.idx)}"></span>${l.navn}</li>`).join("");
+  document.getElementById("legend-weekly").innerHTML = legendHtml;
+  document.getElementById("legend-cumulative").innerHTML = legendHtml;
 
   const tip = document.getElementById("tip");
   const showTip = (e, html) => {
@@ -226,14 +235,16 @@
   const roundTop = (x, y, w, h, r) => { r = Math.min(r, h, w / 2); return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; };
   const roundRight = (x, y, w, h, r) => { r = Math.min(r, w, h / 2); return `M${x},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h - r}Q${x + w},${y + h} ${x + w - r},${y + h}H${x}Z`; };
 
-  function drawWeekly() {
-    const box = document.getElementById("chart-weekly"); box.innerHTML = "";
+  // Stablet søylediagram per uke. cumulative=false: besøk i uka; true: sum fra start til og med uka.
+  function drawStacked(boxId, cumulative) {
+    const box = document.getElementById(boxId); box.innerHTML = "";
     const W = box.clientWidth, H = box.clientHeight, m = { t: 12, r: 8, b: 44, l: 56 };
     const svg = el("svg", { width: W, height: H, viewBox: `0 0 ${W} ${H}` }, box);
     // Akkumulert per land: cum[l.kode][i] = sum av uke 0..i
     const cum = {};
     series.forEach((l) => { let s = 0; cum[l.kode] = D.uker.map((u) => (s += l.seere[u.id] || 0)); });
-    const totals = D.uker.map((u, i) => series.reduce((a, l) => a + cum[l.kode][i], 0));
+    const val = (l, i) => cumulative ? cum[l.kode][i] : (l.seere[D.uker[i].id] || 0);
+    const totals = D.uker.map((u, i) => series.reduce((a, l) => a + val(l, i), 0));
     const max = niceMax(Math.max(...totals, 1));
     const ih = H - m.t - m.b, iw = W - m.l - m.r;
     const y = (v) => m.t + ih - (v / max) * ih;
@@ -246,9 +257,9 @@
     D.uker.forEach((u, i) => {
       const cx = m.l + band * i + band / 2, x = cx - bw / 2;
       let acc = 0;
-      const segs = series.filter((l) => cum[l.kode][i]);
+      const segs = series.filter((l) => val(l, i));
       segs.forEach((l, j) => {
-        const v = cum[l.kode][i], y0 = y(acc), y1 = y(acc + v); acc += v;
+        const v = val(l, i), y0 = y(acc), y1 = y(acc + v); acc += v;
         const h = y0 - y1 - (j < segs.length - 1 ? 2 : 0);
         const top = y1 + (j < segs.length - 1 ? 2 : 0);
         const path = j === segs.length - 1 ? roundTop(x, y1, bw, y0 - y1, 4) : `M${x},${y0}V${top}H${x + bw}V${y0}Z`;
@@ -259,8 +270,10 @@
       el("text", { x: cx, y: H - m.b + 34, "text-anchor": "middle", fill: css("--text-3"), "font-size": 12 }, svg).textContent = u.periode;
       const hit = el("rect", { x: m.l + band * i, y: m.t, width: band, height: ih, fill: "transparent" }, svg);
       const html = `<strong>${u.navn}</strong> <span class="muted">${u.periode}</span>` +
-        [...segs].reverse().map((l) => `<div class="tr"><span class="sw" style="background:${colorOf(l.idx)}"></span>${l.navn}<b>${fmt(cum[l.kode][i])} <span class="muted">(+${fmt(l.seere[u.id] || 0)})</span></b></div>`).join("") +
-        `<div class="tr tot">Totalt<b>${fmt(acc)} <span class="muted">(+${fmt(series.reduce((a, l) => a + (l.seere[u.id] || 0), 0))})</span></b></div>`;
+        [...segs].reverse().map((l) => `<div class="tr"><span class="sw" style="background:${colorOf(l.idx)}"></span>${l.navn}<b>${fmt(val(l, i))}` +
+          (cumulative ? ` <span class="muted">(+${fmt(l.seere[u.id] || 0)})</span>` : "") + `</b></div>`).join("") +
+        `<div class="tr tot">Totalt<b>${fmt(acc)}` +
+          (cumulative ? ` <span class="muted">(+${fmt(series.reduce((a, l) => a + (l.seere[u.id] || 0), 0))})</span>` : "") + `</b></div>`;
       hit.addEventListener("mousemove", (e) => showTip(e, html));
       hit.addEventListener("mouseleave", hideTip);
     });
@@ -285,7 +298,7 @@
     });
   }
 
-  const drawAll = () => { drawWeekly(); drawTotals(); };
+  const drawAll = () => { drawStacked("chart-weekly", false); drawStacked("chart-cumulative", true); drawTotals(); };
   drawAll();
   let t; addEventListener("resize", () => { clearTimeout(t); t = setTimeout(drawAll, 120); });
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", drawAll);

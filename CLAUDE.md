@@ -43,4 +43,4 @@ f.eks. «Oppdatert tall uke 47», og push til GitHub.
   skjermbilde eller fil når tall mangler.
 - Filmikamari sine tall er betalt – bruk ses.fi for Finland.
 - Slovakiske UFD-uker starter torsdag.
-- Første graf viser akkumulerte totaler (sum fra start til og med hver uke).
+- Første graf viser seere per uke per land; andre graf viser akkumulerte totaler (sum fra start til og med hver uke).
