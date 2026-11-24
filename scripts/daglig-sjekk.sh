@@ -20,6 +20,12 @@ fi
 if [[ -n "$(git status --porcelain)" ]]; then
   echo "Repoet har ulagrede endringer – hopper over i dag."; exit 1
 fi
+# Vent på nett (Mac-en kan nettopp ha våknet) – prøv i opptil 5 minutter
+for i in {1..30}; do
+  git ls-remote -q origin >/dev/null 2>&1 && break
+  [[ $i -eq 30 ]] && { echo "Ingen nettforbindelse – avbryter."; exit 1; }
+  sleep 10
+done
 git pull --ff-only
 
 "$CLAUDE" -p --model sonnet \

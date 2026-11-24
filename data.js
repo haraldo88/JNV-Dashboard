@@ -7,7 +7,7 @@
 
 window.JNV_DATA = {
   film: "Julenissens verksted",
-  oppdatert: "2026-11-23",
+  oppdatert: "2026-11-24",
 
   // Uker som vises i grafen (rekkefølge = x-aksen)
   uker: [
@@ -23,8 +23,8 @@ window.JNV_DATA = {
       tittel: "Julenissens verksted",
       premiere: "2026-11-06",
       distributor: "Nordisk Film Distribusjon",
-      seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 38486 },
-      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (138 323 − 99 837); 138 323 er «Tot. besøk» per 22.11 fra kino.no.",
+      seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 39413 },
+      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (139 250 − 99 837); 139 250 er «Tot. besøk» per 22.11 fra kino.no (justert 24.11, tidligere 138 323).",
       kilde: "https://kino.no/tallogfakta/",
       trailer: { url: "https://www.nfkino.no/film/julenissens-verksted", tekst: "Trailer hos Nordisk Film Kino" },
       anmeldelser: [
@@ -39,8 +39,8 @@ window.JNV_DATA = {
       tittel: "Santova čarovná dielňa",
       premiere: "2026-11-05",
       distributor: "Forum Film Slovakia",
-      seere: { "2026-U45": 5205, "2026-U46": 2587 },
-      merknad: "UFD-uker starter torsdag (5.11 og 12.11).",
+      seere: { "2026-U45": 5205, "2026-U46": 2587, "2026-U47": 2568 },
+      merknad: "UFD-uker starter torsdag (5.11 og 12.11). Uke 47 = differanse i akkumulert (10 360 − 7 792) fra UFD-lista 19.11, dvs. 16.–22. nov.",
       kilde: "https://www.ufd.sk/aktualny-top-20/",
       trailer: { url: "https://www.forumfilm.sk/santova-carovna-dielna", tekst: "Trailer hos Forum Film" },
       anmeldelser: [
@@ -53,9 +53,9 @@ window.JNV_DATA = {
       tittel: "Joulupukin salainen paja",
       premiere: "2026-11-13",
       distributor: "Nordisk Film Finland",
-      seere: { "2026-U46": 3506 },
-      merknad: "Kun åpningshelgen 13.–15. nov (5. plass, 72 kinoer).",
-      kilde: "https://www.ses.fi/ajankohtaista/top-20-viiden-karjessa-oli-kolme-ensi-iltaa/",
+      seere: { "2026-U46": 3506, "2026-U47": 3815 },
+      merknad: "Uke 46: åpningshelgen 13.–15. nov (5. plass, 72 kinoer). Uke 47 = differanse i akkumulert (7 321 − 3 506); helgen 20.–22. nov: 2 796 (5. plass, 67 kinoer).",
+      kilde: "https://www.ses.fi/ajankohtaista/top-20-nalkapeli-elonkorjuun-sarastus-avasi-listakarjessa/",
       trailer: { url: "https://www.youtube.com/watch?v=X5Gf3rpxKhE", tekst: "YouTube (finsk)" },
       anmeldelser: [
         { kilde: "Filminurkka (YouTube)", url: "https://www.youtube.com/watch?v=jnvtEh05Ah4" }
