@@ -24,8 +24,8 @@ window.JNV_DATA = {
       tittel: "Julenissens verksted",
       premiere: "2026-11-06",
       distributor: "Nordisk Film Distribusjon",
-      seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 39352, "2026-U48": 6702 },
-      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (139 189 − 99 837); 139 189 er «Tot. besøk» per 22.11 fra kino.no (justert 26.11, tidligere 139 250 og 138 323). Uke 48 er delvis (kun mandag–torsdag 23.–26.11): differanse 145 891 − 139 189 = 6 702; 145 891 er «Tot. besøk» per 26.11 fra kino.no.",
+      seere: { "2026-U45": 59179, "2026-U46": 40658, "2026-U47": 39352, "2026-U48": 6697 },
+      merknad: "Uke 45 inkl. førpremierer. Uke 46 = differanse mellom akkumulerte tall (99 837 − 59 179). Uke 47 = differanse (139 189 − 99 837); 139 189 er «Tot. besøk» per 22.11 fra kino.no (justert 26.11, tidligere 139 250 og 138 323). Uke 48 er delvis (kun mandag–torsdag 23.–26.11): differanse 145 886 − 139 189 = 6 697; 145 886 er «Tot. besøk» per 26.11 fra kino.no (justert 27.11, tidligere 145 891).",
       kilde: "https://kino.no/tallogfakta/",
       trailer: { url: "https://www.nfkino.no/film/julenissens-verksted", tekst: "Trailer hos Nordisk Film Kino" },
       anmeldelser: [
